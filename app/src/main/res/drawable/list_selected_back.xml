@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:exitFadeDuration="@android:integer/config_shortAnimTime">
+    <item android:state_activated="true" android:drawable="@drawable/round_fill_white" />
+    <item android:drawable="@android:color/transparent" />
+</selector>

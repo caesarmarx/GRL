@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'happy'
+            keyPassword 'happyboy123'
+            storeFile file('/Users/macdev001/Desktop/SNS/SVN_WORK/trunk/src/client/android/GRL/app/my_key_store.jks')
+            storePassword 'happyboy'
+        }
+        debug {
+            keyAlias 'happy'
+            keyPassword 'happyboy123'
+            storeFile file('/Users/macdev001/Desktop/SNS/SVN_WORK/trunk/src/client/android/GRL/app/my_key_store.jks')
+            storePassword 'happyboy'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '22.0.0'
+    defaultConfig {
+        applicationId "grl.wangu.com.grl"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+//        debug {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode true
+    }
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/layouts/LoginRegister',
+                    'src/main/res/layouts/Main',
+                    'src/main/res/layouts/Consult',
+                    'src/main/res/layouts/Discovery',
+                    'src/main/res/layouts/Order',
+                    'src/main/res/layouts/Energy',
+                    'src/main/res/layouts/Common',
+                    'src/main/res/layouts/Other',
+                    'src/main/res/layouts/Search',
+                    'src/main/res/layouts/ImageManage',
+                    'src/main/res/layouts/Dialog',
+                    'src/main/res/layouts/Map'
+            ]
+//            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    productFlavors {
+    }
+}
+
+
+dependencies {
+    compile project(':cropper')
+    compile project(':imagezoom')
+    compile project(':Pushlib')
+    compile project(':sqlite')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:percent:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.+'
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha1'
+    compile 'info.hoang8f:android-segmented:1.0.6'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.mikhaellopez:circularimageview:3.0.2'
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    testCompile 'junit:junit:4.12'
+    compile(name: 'juslogin', ext: 'aar')
+    compile(name: 'juscall', ext: 'aar')
+    compile(name: 'jusdoodle', ext: 'aar')
+
+}

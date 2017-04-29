@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout= "@layout/layout_header"
+        android:layout_width="0dp"
+        app:layout_widthPercent="100%"
+        android:layout_height="48dp"
+        android:id="@+id/view_header"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        app:layout_widthPercent="80%"
+        android:layout_height="0dp"
+        app:layout_heightPercent="60%"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray_color"
+            android:textSize="@dimen/font17"
+            android:text="@string/tgroup_estimate_placeholder"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"
+                    android:text="@string/good"/>
+                <RadioButton
+                    android:id="@+id/btn_estimate_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:buttonTint="@color/yellowBack"
+                    android:textSize="@dimen/font17"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/tv_estimate_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"
+                    android:text="@string/already_estimate"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"
+                    android:text="@string/normal"/>
+                <RadioButton
+                    android:id="@+id/btn_estimate_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:buttonTint="@color/yellowBack"
+                    android:textSize="@dimen/font17"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/tv_estimate_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"
+                    android:text="@string/already_estimate"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"
+                    android:text="@string/bad"/>
+                <RadioButton
+                    android:id="@+id/btn_estimate_bad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:buttonTint="@color/yellowBack"
+                    android:textSize="@dimen/font17"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/tv_estimate_bad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"
+                    android:text="@string/already_estimate"/>
+            </LinearLayout>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_estimate"
+            style="@style/large_btn_style"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/yellow_btn_selection"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font20"
+            android:text="@string/save"/>
+
+    </LinearLayout>
+
+</android.support.percent.PercentRelativeLayout>

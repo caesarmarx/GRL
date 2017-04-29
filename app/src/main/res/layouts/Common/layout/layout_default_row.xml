@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/large_cell_height"
+    android:background="@drawable/setting_item_selector">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_user_photo"
+        android:layout_width="@dimen/normal_imageview_size"
+        android:layout_height="@dimen/normal_imageview_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/border_margin"
+        android:scaleType="fitXY"
+        android:src="@drawable/user_default"
+        app:riv_corner_radius="@dimen/normal_radius"
+        app:riv_oval="false"/>
+    <TextView
+        android:id="@+id/txt_user_name"
+        android:layout_toRightOf="@id/img_user_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/light_gray_color"
+        android:textSize="@dimen/font15"
+        android:text=""/>
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/light_gray_color"
+        android:textSize="@dimen/font15"
+        android:text="@string/order_plate_group"
+        android:visibility="gone"/>
+    <include layout="@layout/layout_border"
+        android:id="@+id/view_border"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

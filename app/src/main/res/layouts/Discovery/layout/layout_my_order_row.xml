@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/large_cell_height">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/tv_order_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font17"/>
+
+        <TextView
+            android:id="@+id/tv_order_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="3dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/light_gray_color"
+            android:textSize="@dimen/font15"/>
+        <TextView
+            android:id="@+id/tv_order_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="7dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="@dimen/font15"/>
+    </RelativeLayout>
+
+    <include layout="@layout/layout_border"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/border_margin"/>
+
+</RelativeLayout>

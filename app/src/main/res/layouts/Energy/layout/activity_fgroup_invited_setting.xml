@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+
+    <include layout="@layout/layout_header"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvRule"
+                style="@style/TxtTitle"
+                android:layout_height="@dimen/samll_cell_height"
+                android:textSize="@dimen/font17"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:paddingLeft="@dimen/row_view_margin"
+                android:paddingRight="@dimen/row_view_margin"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="@dimen/border_margin"
+                android:drawableRight="@drawable/right"
+                android:text="@string/fgroup_rule_title" />
+            <include layout="@layout/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/border_margin"/>
+            <TextView
+                android:id="@+id/tvPost"
+                style="@style/TxtTitle"
+                android:layout_height="@dimen/samll_cell_height"
+                android:textSize="@dimen/font17"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:paddingLeft="@dimen/row_view_margin"
+                android:paddingRight="@dimen/row_view_margin"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="@dimen/border_margin"
+                android:drawableRight="@drawable/right"
+                android:text="@string/fgroup_post_title" />
+            <include layout="@layout/layout_border" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"
+                style="@style/TxtTitle"
+                android:textSize="@dimen/font17"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/row_view_margin"
+                android:background="@color/list_group_color"
+                android:textColor="@color/dark_gray_color"
+                android:text="@string/fgroup_setting"/>
+            <include layout="@layout/layout_border" />
+            <RelativeLayout
+                android:id="@+id/nickSetting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/samll_cell_height"
+                android:background="@drawable/setting_item_selector">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/row_view_margin"
+                    android:textSize="@dimen/font17"
+                    android:textColor="@android:color/black"
+                    android:text="@string/fgroup_neck_switch"/>
+                <Switch
+                    android:id="@+id/switch_nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/row_view_margin"
+                    android:checked="true"
+                    android:theme="@style/SCBSwitch"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+            <include layout="@layout/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/border_margin"/>
+            <TextView
+                android:id="@+id/tvClear"
+                style="@style/TxtTitle"
+                android:layout_height="@dimen/samll_cell_height"
+                android:textSize="@dimen/font17"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:paddingLeft="@dimen/row_view_margin"
+                android:paddingRight="@dimen/row_view_margin"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="@dimen/border_margin"
+                android:drawableRight="@drawable/right"
+                android:text="@string/fgroup_chat_clear" />
+            <include layout="@layout/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/border_margin"/>
+
+            <RelativeLayout
+                android:id="@+id/layoutNick"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/samll_cell_height"
+                android:background="@drawable/setting_item_selector">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/row_view_margin"
+                    android:textSize="@dimen/font17"
+                    android:textColor="@android:color/black"
+                    android:text="@string/fgroup_my_nick"/>
+                <TextView
+                    android:id="@+id/txtNick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/row_view_margin"
+                    android:textSize="@dimen/font17"
+                    android:textColor="@color/light_gray_color"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <include layout="@layout/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/border_margin"/>
+
+            <TextView
+                android:id="@+id/txtInfo"
+                style="@style/TxtTitle"
+                android:layout_height="@dimen/samll_cell_height"
+                android:textSize="@dimen/font17"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:paddingLeft="@dimen/row_view_margin"
+                android:paddingRight="@dimen/row_view_margin"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="@dimen/border_margin"
+                android:drawableRight="@drawable/right"
+                android:text="@string/fgroup_member_info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:background="@color/list_group_color"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/btn_post"
+                        android:layout_width="80dp"
+                        android:layout_height="@dimen/small_btn_height"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/yellow_btn_selection"
+                        android:textColor="@color/dark_gray_color"
+                        android:textSize="@dimen/font15"
+                        android:text="@string/fgroup_post"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/btn_exit"
+                        android:layout_width="80dp"
+                        android:layout_height="@dimen/small_btn_height"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/yellow_btn_selection"
+                        android:textColor="@color/dark_gray_color"
+                        android:textSize="@dimen/font15"
+                        android:text="@string/fgroup_exit_btn"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/layout_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/small_cell_height"
+        android:background="@color/list_group_color"
+        android:layoutDirection="rtl"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/cell_padding">
+            <Button
+                android:id="@+id/btn_search"
+                style="@style/small_btn_style"
+                android:layout_margin="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/dark_gray_color"
+                android:text="@string/search"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/cell_padding"
+            android:layout_marginLeft="@dimen/cell_padding">
+            <Button
+                android:id="@+id/btn_direction"
+                android:layout_margin ="0dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=""
+                android:background="@drawable/direction_btn"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layoutDirection="rtl"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/cell_padding"
+                android:layout_gravity="center"
+                android:text="米"
+                android:textAlignment="center"
+                android:textSize="@dimen/font15"/>
+
+            <EditText
+                android:id="@+id/et_max_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textSize="@dimen/font15"
+                android:textDirection="ltr"
+                android:textCursorDrawable="@null"
+                android:inputType="number"
+                android:hint="@string/max_distance"
+                android:background="@drawable/round_fill_white_with_border"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layoutDirection="rtl"
+            android:layout_marginLeft="@dimen/cell_padding"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/cell_padding"
+                android:paddingRight="@dimen/cell_padding"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="@dimen/font15"/>
+
+            <EditText
+                android:id="@+id/et_min_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textSize="@dimen/font15"
+                android:textDirection="ltr"
+                android:textCursorDrawable="@null"
+                android:inputType="number"
+                android:hint="@string/min_distance"
+                android:background="@drawable/round_fill_white_with_border"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/user_gps_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

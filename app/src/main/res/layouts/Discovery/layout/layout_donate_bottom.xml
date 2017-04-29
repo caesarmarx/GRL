@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/yellowBack">
+    <Button
+        android:id="@+id/btn_donate_request"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_height"
+        android:layout_weight="1"
+        android:onClick="onTabClicked"
+        android:textSize="@dimen/font17"
+        android:textColor="@color/light_dark_color"
+        android:background="@android:color/transparent"
+        android:text="@string/donate_request_tab"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_donate_control"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_height"
+        android:layout_weight="1"
+        android:onClick="onTabClicked"
+        android:textSize="@dimen/font17"
+        android:textColor="@color/light_dark_color"
+        android:text="@string/donate_help_tab"
+        android:background="@android:color/transparent"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_donate_history"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/tab_height"
+        android:layout_weight="1"
+        android:onClick="onTabClicked"
+        android:textSize="@dimen/font17"
+        android:textColor="@color/light_dark_color"
+        android:text="@string/donate_history_tab"
+        android:background="@android:color/transparent"
+        android:gravity="center"/>
+</LinearLayout>

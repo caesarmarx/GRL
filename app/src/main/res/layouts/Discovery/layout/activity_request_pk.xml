@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+
+    <!-- nav header -->
+    <include layout="@layout/layout_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:layoutDirection="rtl">
+
+        <Button
+            android:id="@+id/btn_request_pk"
+            style="@style/normal_btn_style"
+            android:text="@string/menu_request_pk"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <EditText
+                android:id="@+id/et_phone_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textDirection="ltr"
+                android:textCursorDrawable="@null"
+                android:inputType="phone"
+                android:background="@android:color/white"
+                android:hint="@string/input_phone_number"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_height="0.1dp"
+                android:layout_below="@id/et_phone_number"
+                android:background="@android:color/black" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/section_padding_size"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/light_gray_color"
+        android:textSize="@dimen/font17"
+        android:text="@string/menu_request_pk"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/popular_pk_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/section_padding_size"
+        android:background="@color/white">
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

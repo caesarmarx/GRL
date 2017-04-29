@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/order_background"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/yellowBack" >
+
+        <TextView
+            android:id="@+id/txt_back"
+            style="@style/txt_titleStyle1"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone"
+            android:text="@string/user_nav_back"/>
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="40dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/txt_titleStyle1"
+            android:text="@string/user_register"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="70%"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="40%"
+            android:orientation="vertical">
+
+        </RelativeLayout>
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="60%"
+            android:layout_alignParentBottom="true">
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/passwordView"
+                android:layout_width="0dp"
+                android:layout_height="33dp"
+                app:layout_widthPercent="80%"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    app:layout_widthPercent="30%"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="密码 : "
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font17"/>
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    app:layout_widthPercent="70%"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:maxLength="11"
+                    android:inputType="phone"
+                    android:hint="@string/user_repass_password_placeholder"
+                    android:textColorHint="@color/black_placehold_color"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/white" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/confirmView"
+                android:layout_width="0dp"
+                android:layout_height="33dp"
+                app:layout_widthPercent="80%"
+                android:layout_alignTop="@+id/passwordView"
+                android:layout_marginTop="45dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    app:layout_widthPercent="30%"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="确认密码 : "
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font17"/>
+
+                <EditText
+                    android:id="@+id/et_repass"
+                    android:layout_width="0dp"
+                    app:layout_widthPercent="70%"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:maxLength="11"
+                    android:inputType="phone"
+                    android:hint="@string/user_repass_confirm_placeholder"
+                    android:textColorHint="@color/black_placehold_color"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/white" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <Button
+                android:id="@+id/passNextBtn"
+                android:background="@drawable/user_login_bottom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@+id/confirmView"/>
+
+            <Button
+                android:id="@+id/passLoginBtn"
+                android:background="@drawable/verify_img_btn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@+id/confirmView"/>
+
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentRelativeLayout>

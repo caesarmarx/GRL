@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="0dp"
+    android:background="@drawable/round_fill_group_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="0dp"
+        android:background="@drawable/round_fill_top_white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/user_skill"
+                android:textSize="@dimen/font17"
+                android:textColor="@color/dark_gray_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=" : "
+                android:textSize="@dimen/font17"
+                android:textColor="@color/dark_gray_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/font17"
+                android:textColor="@color/dark_gray_color"/>
+        </LinearLayout>
+        <include layout="@layout/layout_border" ></include>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/list_border_color" />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_generic_layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/dlg_btn_style"
+            android:layout_width="0.0dip"
+            android:layout_height="40dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="确定"/>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/dlg_btn_style"
+            android:layout_width="0.0dip"
+            android:layout_height="40dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="取消"/>
+
+    </LinearLayout>
+</LinearLayout>

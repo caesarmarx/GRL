@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/layout_header" />
+    <include layout="@layout/normal_section_row"/>
+    <TextView
+        android:id="@+id/tvTeacher"
+        style="@style/TxtTitle"
+        android:layout_height="@dimen/samll_cell_height"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:background="@drawable/setting_item_selector"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/row_view_margin"
+        android:paddingRight="@dimen/row_view_margin"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:text="@string/energy_request_teacher" />
+    <View layout="@layout/normal_section_row"
+        android:id="@+id/border_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/border_margin"
+        android:background="@color/list_border_color"/>
+    <TextView
+        android:id="@+id/tvDisciple"
+        style="@style/TxtTitle"
+        android:layout_height="@dimen/samll_cell_height"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:background="@drawable/setting_item_selector"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/row_view_margin"
+        android:paddingRight="@dimen/row_view_margin"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:text="@string/energy_request_disciple" />
+    <View layout="@layout/normal_section_row"
+        android:id="@+id/border_disciple"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/list_border_color"
+        android:layout_marginLeft="@dimen/border_margin" />
+    <TextView
+        android:id="@+id/tvGrl"
+        style="@style/TxtTitle"
+        android:layout_height="@dimen/samll_cell_height"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:background="@drawable/setting_item_selector"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/row_view_margin"
+        android:paddingRight="@dimen/row_view_margin"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:text="@string/energy_request_grl" />
+    <include layout="@layout/layout_border"/>
+    <TextView
+        style="@style/TxtTitle"
+        android:layout_height="30dp"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:background="@color/list_group_color"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/row_view_margin"
+        android:paddingRight="@dimen/row_view_margin"
+        android:layout_gravity="center_vertical"
+        android:text="@string/energy_request_grl"
+        android:textColor="@color/dark_gray_color"/>
+    <include layout="@layout/layout_border"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+</LinearLayout>

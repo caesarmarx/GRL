@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="90dp"
+    android:layout_height="30dp"
+    android:background="@drawable/view_bck">
+    <Button
+        android:id="@+id/btnConsider"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@string/consider_teacher"/>
+
+    <Button
+        android:id="@+id/btnGiveup"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@string/giveup_title"/>
+</LinearLayout>

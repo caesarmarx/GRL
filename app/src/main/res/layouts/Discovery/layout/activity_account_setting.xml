@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_header"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/samll_cell_height"
+        android:background="@color/white">
+        <Button
+            android:id="@+id/btn_plate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fgroup_menu_selector"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="@dimen/font17"
+            android:textAlignment="center"
+            android:text="@string/purchase_plate_tab"/>
+        <Button
+            android:id="@+id/btn_gift"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fgroup_menu_selector"
+            android:textColor="@color/light_dark_color"
+            android:textSize="@dimen/font17"
+            android:textAlignment="center"
+            android:text="@string/gift_tab"/>
+        <Button
+            android:id="@+id/btn_exchange"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/fgroup_menu_selector"
+            android:textColor="@color/light_dark_color"
+            android:textSize="@dimen/font17"
+            android:textAlignment="center"
+            android:text="@string/exchange_tab"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:scrollbars="none"/>
+</LinearLayout>

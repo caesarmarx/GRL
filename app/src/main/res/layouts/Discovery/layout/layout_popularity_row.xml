@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/contactitem_layout"
+        style="@style/MMListItem"
+        android:gravity="top"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dip" >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_user_photo"
+            style="@style/img_photo_round"
+            app:riv_corner_radius="@dimen/normal_radius"
+            app:riv_oval="false"
+            android:layout_width="@dimen/samll_cell_height"
+            android:layout_height="@dimen/samll_cell_height"
+            android:src="@drawable/user_default" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingBottom="5dp">
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/MMFontTitleInList"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:text="老婆" />
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_below="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是多幸福啊！辛苦了亲爱的！么么哒！~"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/font17"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:id="@+id/layout_photo"
+                android:layout_below="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/img_photo"
+                    android:layout_width="90.0dip"
+                    android:layout_height="90.0dip"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/tv_sure_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_photo"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font15"/>
+
+            <LinearLayout
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/tv_sure_man"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="80dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_praise_total"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font15"/>
+
+                <TextView
+                    android:id="@+id/tv_estimate_total"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font15"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/img_operation"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_sure_man"
+                android:layout_width="40dp"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_marginTop="3dp"
+                    android:layout_width="23dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/afr" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_below="@+id/layout_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56分钟前"
+                android:textColor="@color/light_gray_color"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:background="@color/list_group_color"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+</LinearLayout>

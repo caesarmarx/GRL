@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+
+    <!-- nav header -->
+    <include layout="@layout/layout_header"/>
+
+    <ScrollView
+        android:id="@+id/entire_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/list_group_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/small_cell_height"
+                    android:text="PK"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font17"/>
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/pk_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/tv_no_request"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="@dimen/samll_cell_height"
+                    android:background="@color/white"
+                    android:text="@string/no_data"
+                    android:gravity="center"
+                    android:textColor="@color/black_placehold_color"
+                    android:textSize="@dimen/font17"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cell_padding"
+                android:orientation="vertical"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/small_cell_height"
+                    android:text="@string/menu_example_list"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:textSize="@dimen/font17"/>
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/example_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/tv_no_example"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="@dimen/samll_cell_height"
+                    android:background="@color/white"
+                    android:text="@string/no_data"
+                    android:gravity="center"
+                    android:textColor="@color/black_placehold_color"
+                    android:textSize="@dimen/font17"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cell_padding"
+                android:orientation="vertical"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/small_cell_height"
+                    android:text="@string/sure_man"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:textSize="@dimen/font17"/>
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/sure_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/tv_no_sure"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="@dimen/samll_cell_height"
+                    android:background="@color/white"
+                    android:text="@string/no_data"
+                    android:gravity="center"
+                    android:textColor="@color/black_placehold_color"
+                    android:textSize="@dimen/font17"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cell_padding"
+                android:orientation="vertical"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/small_cell_height"
+                    android:text="@string/tgroup_challenge_title"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:textSize="@dimen/font17"/>
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/challenge_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/tv_no_challenge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="@dimen/samll_cell_height"
+                    android:background="@color/white"
+                    android:text="@string/no_data"
+                    android:gravity="center"
+                    android:textColor="@color/black_placehold_color"
+                    android:textSize="@dimen/font17"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

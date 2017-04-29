@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:layout_width="70dp"
+	android:layout_height="70dp"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools" >
+	<ImageView
+		android:id="@+id/iv_expression"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:layout_margin="5dp"
+		android:layout_centerInParent="true"
+		android:scaleType="fitStart">
+	</ImageView>
+</RelativeLayout>

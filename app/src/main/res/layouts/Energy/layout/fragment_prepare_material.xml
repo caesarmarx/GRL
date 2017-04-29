@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_border"
+            android:background="@color/list_border_color"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <TextView
+            android:id="@+id/tv_prepare_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font20"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/url"/>
+
+        <include layout="@layout/layout_border"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <EditText
+            android:id="@+id/edit_file_url"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:background="@drawable/rectange_outline_black"
+            android:textColor="@android:color/black"/>
+        <include layout="@layout/layout_border"
+            android:background="@color/list_border_color"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_upload_material"
+                style="@style/large_btn_style"
+                android:text="@string/download"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_download_material"
+                style="@style/large_btn_style"
+                android:background="@drawable/round_fill_white_with_border"
+                android:textColor="@color/dark_gray_color"
+                android:text="@string/upload"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

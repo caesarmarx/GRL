@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <!-- background yellow color -->
+    <color name="yellowBack">#FFDD01</color>
+    <color name="light_yellow_back">#FDE3BE</color>
+
+    <!-- tabBar selected cololr-->
+    <color name="tab_selected_color">#6F7179</color>
+    <!-- textView color -->
+    <color name="light_gray_color">#878787</color>
+    <color name="dark_gray_color">#555555</color>
+    <color name="light_dark_color">#BBBBBB</color>
+
+    <!-- listview border and section color -->
+    <color name="list_border_color">#C8C7CC</color>
+    <color name="list_group_color">#ffeaeaea</color>
+
+    <!-- place holder color -->
+    <color name="place_holder_color">#D2D2D2</color>
+    <color name="black_placehold_color">#909090</color>
+
+    <color name="login_comment_color">#BABABA</color>
+
+    <color name="main_tab_bar_color">#000000</color>
+    <color name="row_pressed_color">#ffeeeeee</color>
+
+    <!-- progress dialog -->
+    <color name="color_preloader_start">#60A0A0A0</color>
+    <color name="color_preloader_center">#60C0C0C0</color>
+    <color name="color_preloader_end">#60E0E0E0</color>
+
+    <color name="red">#FF000000</color>
+
+    <!-- 二维码 zxing -->
+    <color name="viewfinder_frame">#3AC814</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_laser">#E9E9E9</color>
+    <!-- end zxing -->
+
+    <!-- crash -->
+    <color name="crash_status_normal">#D9D9D9</color>
+    <color name="crash_status_waiting">#2094C0</color>
+    
+</resources>

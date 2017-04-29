@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_header"
+        android:id="@+id/view_header"/>
+    <RelativeLayout
+        android:layout_below="@id/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layout_section"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+            <TextView
+                android:id="@+id/txt_group_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font17"
+                android:textColor="@color/dark_gray_color"
+                android:gravity="center"
+                android:background="@color/list_group_color"
+                android:text="football"/>
+            <include layout="@layout/layout_border"/>
+            <include layout="@layout/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_below="@id/layout_section"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+    </RelativeLayout>
+</RelativeLayout>

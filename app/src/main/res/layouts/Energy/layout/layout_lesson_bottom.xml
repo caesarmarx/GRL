@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:background="@color/yellowBack"
+    android:gravity="center_vertical"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/tv_prepare_enter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:onClick="onTabClicked"
+        android:text="@string/tgroup_prepare_enter_title"
+        android:textColor="@color/dark_gray_color"
+        android:background="@android:color/transparent"
+        android:textSize="@dimen/font20"
+        android:padding="3dp" >
+    </Button>
+
+    <Button
+        android:id="@+id/tv_prepare_rule"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:onClick="onTabClicked"
+        android:text="@string/tgroup_prepare_rule_title"
+        android:textColor="@color/light_dark_color"
+        android:background="@android:color/transparent"
+        android:textSize="@dimen/font20"
+        android:padding="3dp" >
+    </Button>
+
+    <Button
+        android:id="@+id/tv_prepare_material"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:onClick="onTabClicked"
+        android:text="@string/tgroup_prepare_material_title"
+        android:textColor="@color/light_dark_color"
+        android:background="@android:color/transparent"
+        android:textSize="@dimen/font20"
+        android:padding="3dp" >
+    </Button>
+
+    <Button
+        android:id="@+id/tv_prepare_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:onClick="onTabClicked"
+        android:textColor="@color/light_dark_color"
+        android:background="@android:color/transparent"
+        android:text="@string/tgroup_prepare_time_title"
+        android:textSize="@dimen/font20"
+        android:padding="3dp" >
+    </Button>
+
+</LinearLayout>

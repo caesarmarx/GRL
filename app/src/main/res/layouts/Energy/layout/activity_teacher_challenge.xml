@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+
+    <!-- nav header -->
+    <include layout="@layout/layout_header"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_group_color"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/section_style"
+                android:layout_marginTop="20dp"
+                android:layout_height="@dimen/large_cell_height">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_user_photo"
+                    style="@style/img_photo_round"
+                    app:riv_corner_radius="@dimen/normal_radius"
+                    app:riv_oval="false"
+                    android:layout_width="@dimen/normal_imageview_size"
+                    android:layout_height="@dimen/normal_imageview_size"
+                    android:layout_marginLeft="@dimen/section_padding_size"
+                    android:src="@drawable/user_default"/>
+
+                <TextView
+                    android:id="@+id/tv_group_name"
+                    android:layout_width="fill_parent"
+                    style="@style/section_title_style"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+            <LinearLayout
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_title_style"
+                    android:text="@string/challenge_log"/>
+                <TextView
+                    android:id="@+id/tv_challenge_log"
+                    style="@style/section_value_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/border_margin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_title_style"
+                    android:text="@string/challenge_money"/>
+                <TextView
+                    android:id="@+id/tv_challenge_money"
+                    style="@style/section_value_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/border_margin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_challenge_goal"
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_sub_btn_style"
+                    android:text="@string/challenge_goal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/border_margin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_challenge_rule"
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_sub_btn_style"
+                    android:text="@string/challenge_rule" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_challenge_request"
+                style="@style/section_btn_style"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/yellow_btn_selection"
+                android:textColor="@color/dark_gray_color"
+                android:text="@string/challenge_request"/>
+
+            <Button
+                android:id="@+id/btn_challenge_response"
+                style="@style/section_btn_style"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/round_fill_white_with_border"
+                android:textColor="@color/dark_gray_color"
+                android:text="@string/challenge_response"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/cell_padding"
+                android:layout_marginRight="@dimen/cell_padding"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="@dimen/content_cell_height"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/samll_cell_height"
+                    android:gravity="center">
+                    <TextView
+                        style="@style/section_title_style"
+                        android:text="@string/challenge_notify"/>
+                </LinearLayout>
+
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/challenge_notify_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white">
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

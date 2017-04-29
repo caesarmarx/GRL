@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/layout_header" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:background="@color/yellowBack"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:scrollbars="none">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:checkedButton="@+id/btn_teacher_popularity">
+            <RadioButton
+                android:id="@+id/btn_teacher_popularity"
+                style="@style/tab_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/teacher_popularity"
+                android:onClick="onTabClicked"/>
+            <RadioButton
+                android:id="@+id/btn_my_popularity"
+                style="@style/tab_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/my_popularity"
+                android:onClick="onTabClicked"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+
+</LinearLayout>

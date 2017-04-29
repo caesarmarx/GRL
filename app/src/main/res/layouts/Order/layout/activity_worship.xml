@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout= "@layout/layout_header"
+        android:layout_width="0dp"
+        app:layout_widthPercent="100%"
+        android:layout_height="48dp"
+        android:id="@+id/view_header"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        app:layout_widthPercent="80%"
+        android:layout_height="0dp"
+        app:layout_heightPercent="60%"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rl_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_btn_height">
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_widthPercent="30%"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:text="名字 : "
+                android:textAlignment="center"
+                android:textColor="@color/dark_gray_color"
+                android:textSize="@dimen/font17"/>
+            <EditText
+                android:id="@+id/et_user_name"
+                android:layout_width="0dp"
+                app:layout_widthPercent="70%"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_alignParentRight="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:maxLength="11"
+                android:hint="@string/input_user_name"
+                android:textColorHint="@color/black_placehold_color"
+                android:textColor="@android:color/black"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/black" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/rl_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_below="@id/rl_name_layout"
+            android:layout_marginTop="@dimen/normal_btn_height"
+            android:layout_height="@dimen/normal_btn_height">
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_widthPercent="30%"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:text="电话 : "
+                android:textAlignment="center"
+                android:textColor="@color/dark_gray_color"
+                android:textSize="@dimen/font17"/>
+            <EditText
+                android:id="@+id/et_user_phone"
+                android:layout_width="0dp"
+                app:layout_widthPercent="70%"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_alignParentRight="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:hint="@string/input_phone_number"
+                android:textColorHint="@color/black_placehold_color"
+                android:textColor="@android:color/black"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/black" />
+        </android.support.percent.PercentRelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_worship"
+            style="@style/large_btn_style"
+            android:layout_width="match_parent"
+            android:layout_below="@id/rl_phone_layout"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/font20"
+            android:text="@string/user_worship"/>
+
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

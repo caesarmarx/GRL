@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tgroup_section_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/list_group_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_photo"
+            android:layout_width="@dimen/large_imageview_size"
+            android:layout_height="@dimen/large_imageview_size"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/row_view_margin"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/user_default"
+            app:riv_corner_radius="@dimen/normal_radius"
+            app:riv_oval="false"/>
+
+        <TextView
+            android:id="@+id/txt_tgroup_section"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="@dimen/font17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+    <include layout="@layout/layout_border"
+        android:layout_height="1px"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

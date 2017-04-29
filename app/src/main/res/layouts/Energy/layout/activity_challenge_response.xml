@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/layout_header" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/small_cell_height"
+        android:orientation="horizontal"
+        android:background="@color/list_group_color"
+        android:gravity="center"
+        android:checkedButton="@+id/rb_challenge_request">
+
+        <RadioButton
+            android:id="@+id/rb_challenge_request"
+            style="@style/menu_radio_btn_style"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/font17"
+            android:text="@string/challenge_request_tab"/>
+        <RadioButton
+            android:id="@+id/rb_challenge_response"
+            style="@style/menu_radio_btn_style"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/font17"
+            android:text="@string/challenge_response_tab"/>
+    </RadioGroup>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/challenge_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/order_background"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+
+    <!-- nav header -->
+    <include layout="@layout/layout_header"
+        android:id="@+id/view_header"/>
+
+    <RelativeLayout
+        android:layout_below="@id/view_header"
+        android:layout_above="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/order_background_discover">
+
+        <grl.com.subViews.star.PlanetShowView
+            android:id="@+id/planet_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </grl.com.subViews.star.PlanetShowView>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_user_photo"
+            style="@style/img_photo_round"
+            app:riv_oval="true"
+            app:riv_border_color="@color/yellowBack"
+            app:riv_border_width="1dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_default"
+            android:contentDescription="test"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <include layout="@layout/normal_section_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_section_height"/>
+        <!-- user status settting -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/samll_cell_height"
+            android:background="@drawable/setting_item_selector">
+            <TextView
+                android:id="@+id/tvStatusTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/row_view_margin"
+                android:textSize="@dimen/font17"
+                android:textColor="@android:color/black"
+                android:text="@string/user_status_setting"/>
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_toRightOf="@id/tvStatusTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/font17"
+                android:textColor="@color/light_gray_color"/>
+            <Switch
+                android:id="@+id/switch_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/row_view_margin"
+                android:checked="true"
+                android:theme="@style/SCBSwitch"
+                android:background="@android:color/transparent"/>
+        </RelativeLayout>
+
+        <include layout="@layout/normal_section_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_section_height"/>
+
+        <TextView
+            android:id="@+id/tvInfo"
+            style="@style/TxtTitle"
+            android:layout_height="@dimen/samll_cell_height"
+            android:textSize="@dimen/font17"
+            android:gravity="center_vertical"
+            android:background="@drawable/setting_item_selector"
+            android:layout_width="fill_parent"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:paddingRight="@dimen/row_view_margin"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/border_margin"
+            android:drawableRight="@drawable/right"
+            android:text="@string/my_info_title" />
+        <include layout="@layout/normal_section_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_section_height"/>
+        <!--<TextView-->
+            <!--android:id="@+id/tvMyOrder"-->
+            <!--style="@style/TxtTitle"-->
+            <!--android:layout_height="@dimen/samll_cell_height"-->
+            <!--android:textSize="@dimen/font17"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:background="@drawable/setting_item_selector"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:paddingLeft="@dimen/row_view_margin"-->
+            <!--android:paddingRight="@dimen/row_view_margin"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:drawablePadding="@dimen/border_margin"-->
+            <!--android:drawableRight="@drawable/right"-->
+            <!--android:text="@string/my_order_title"-->
+            <!--android:visibility="gone"/>-->
+        <!--<include layout="@layout/layout_border"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_marginLeft="@dimen/border_margin" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/tvMyCheer"-->
+            <!--style="@style/TxtTitle"-->
+            <!--android:layout_height="@dimen/samll_cell_height"-->
+            <!--android:textSize="@dimen/font17"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:background="@drawable/setting_item_selector"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:paddingLeft="@dimen/row_view_margin"-->
+            <!--android:paddingRight="@dimen/row_view_margin"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:drawablePadding="@dimen/border_margin"-->
+            <!--android:drawableRight="@drawable/right"-->
+            <!--android:text="@string/my_cheer_title" />-->
+        <!--<include layout="@layout/layout_border"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_marginLeft="@dimen/border_margin"/>-->
+        <TextView
+            android:id="@+id/tvDonate"
+            style="@style/TxtTitle"
+            android:layout_height="@dimen/samll_cell_height"
+            android:textSize="@dimen/font17"
+            android:gravity="center_vertical"
+            android:background="@drawable/setting_item_selector"
+            android:layout_width="fill_parent"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:paddingRight="@dimen/row_view_margin"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/border_margin"
+            android:drawableRight="@drawable/right"
+            android:text="@string/donate_title" />
+        <include layout="@layout/layout_border"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/border_margin"/>
+        <TextView
+            android:id="@+id/tvSetting"
+            style="@style/TxtTitle"
+            android:layout_height="@dimen/samll_cell_height"
+            android:textSize="@dimen/font17"
+            android:gravity="center_vertical"
+            android:background="@drawable/setting_item_selector"
+            android:layout_width="fill_parent"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:paddingRight="@dimen/row_view_margin"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/border_margin"
+            android:drawableRight="@drawable/right"
+            android:text="@string/setting_title" />
+        <include layout="@layout/normal_section_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_section_height"/>
+    </LinearLayout>
+</RelativeLayout>

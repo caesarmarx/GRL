@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_fill_group_color"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="15dp"
+        android:background="@drawable/round_fill_top_white">
+
+        <ImageView
+            android:id="@+id/img_direction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@drawable/direction"/>
+
+        <RadioButton
+            android:id="@+id/btn_east"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@drawable/menu_radio_btn_color"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/font17"
+            android:text="东"
+            android:background="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/btn_east_south"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@drawable/menu_radio_btn_color"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="@dimen/font17"
+            android:text="东南"
+            android:background="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/btn_south"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@drawable/menu_radio_btn_color"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/font17"
+            android:text="南"
+            android:background="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/btn_west_south"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@drawable/menu_radio_btn_color"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="@dimen/font17"
+            android:text="西南"
+            android:background="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/btn_west"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@drawable/menu_radio_btn_color"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/font17"
+            android:text="西"
+            android:background="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/btn_west_north"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@drawable/menu_radio_btn_color"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/font17"
+            android:text="西北"
+            android:background="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/btn_north"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@drawable/menu_radio_btn_color"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/font17"
+            android:gravity="center"
+            android:text="北"
+            android:background="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/btn_east_north"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@drawable/menu_radio_btn_color"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/font17"
+            android:text="东北"
+            android:gravity="center"
+            android:background="@android:color/transparent"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_generic_layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/dlg_btn_style"
+            android:layout_width="0.0dip"
+            android:layout_height="40dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="确定"/>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/dlg_btn_style"
+            android:layout_width="0.0dip"
+            android:layout_height="40dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="取消"/>
+
+    </LinearLayout>
+</LinearLayout>

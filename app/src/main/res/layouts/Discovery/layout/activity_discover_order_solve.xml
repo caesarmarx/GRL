@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+
+    <!-- nav header -->
+    <include layout="@layout/layout_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/list_group_color"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/normal_section_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_section_height"/>
+        <LinearLayout
+            style="@style/section_style"
+            android:layout_height="60dp">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_user_photo"
+                style="@style/img_photo_round"
+                app:riv_corner_radius="@dimen/normal_radius"
+                app:riv_oval="false"
+                android:layout_width="@dimen/large_imageview_size"
+                android:layout_height="@dimen/large_imageview_size"
+                android:layout_marginLeft="@dimen/section_padding_size"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_default"/>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    style="@style/section_title_style"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    style="@style/section_title_style"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_order_budget"
+                    style="@style/section_title_style"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_border"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <LinearLayout
+            style="@style/section_style">
+            <TextView
+                style="@style/section_title_style"
+                android:text="@string/order_date"/>
+            <TextView
+                android:id="@+id/tv_order_date"
+                style="@style/section_value_style"/>
+        </LinearLayout>
+
+        <include layout="@layout/layout_border"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <LinearLayout
+            style="@style/section_style"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/tv_order_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/order_content"
+                android:layout_marginLeft="@dimen/cell_padding"
+                android:layout_marginRight="@dimen/cell_padding"
+                android:layout_marginTop="@dimen/cell_padding"
+                android:layout_marginBottom="@dimen/cell_padding"
+                android:textSize="@dimen/font15"
+                android:textColor="@color/light_gray_color"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/btn_solve_tab">
+            <RadioButton
+                android:id="@+id/btn_solve_tab"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/order_solve"/>
+            <RadioButton
+                android:id="@+id/btn_chat_tab"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/order_chat"/>
+            <RadioButton
+                android:id="@+id/btn_list_tab"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/order_accept_list"/>
+        </RadioGroup>
+
+        <include layout="@layout/layout_border"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/relayout_solve_view"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <EditText
+                android:id="@+id/et_order_solve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_order_solve"
+                android:layout_marginLeft="@dimen/cell_padding"
+                android:layout_marginRight="@dimen/cell_padding"
+                android:layout_marginTop="@dimen/cell_padding"
+                android:padding="3dp"
+                android:layout_alignParentTop="true"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="20dp"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/round_fill_white_with_border"/>
+            <Button
+                android:id="@+id/btn_order_solve"
+                style="@style/section_btn_style"
+                android:background="@drawable/yellow_btn_selection"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="80dp"
+                android:textColor="@color/light_gray_color"
+                android:text="@string/order_solve"/>
+
+            <Button
+                android:id="@+id/btn_order_resend"
+                style="@style/section_btn_style"
+                android:background="@drawable/round_fill_white"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/dark_gray_color"
+                android:text="@string/order_resend"
+                android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
+
+        <grl.com.subViews.view.GroupChatView
+            android:id="@+id/group_chat_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </grl.com.subViews.view.GroupChatView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/user_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/white"
+            android:visibility="gone">
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_section_height"
+            android:background="@color/list_group_color"/>
+    </LinearLayout>
+
+</LinearLayout>

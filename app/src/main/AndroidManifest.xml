@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="grl.wangu.com.grl">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Mi -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <permission
+        android:name="com.justalk.cloud.sample.android.im.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.justalk.cloud.sample.android.im.permission.MIPUSH_RECEIVE" />
+
+    <!-- GCM -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.justalk.cloud.sample.android.im.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.justalk.cloud.sample.android.im.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="grl.com.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="DATABASE"
+            android:value="grl.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="grl.com.configuratoin.dbUtil" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a35000f54ae228c81405562ea2479e24" />
+
+        <!-- 请填写真实的APP_ID API_KEY SECRET_KEY -->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="8334536" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="yIuD8mAeyOrG58edyALZy4HI" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="8082fb0b3c6fa6f5cab8f8b7b766aefd" />
+
+        <!-- push notification -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5784932c67e58e739e003621"></meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="8cc1252c9b1a172bf2d14572d10c996f"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng"></meta-data>
+
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.baidu.voicerecognition.android.ui.BaiduASRDigitalDialog"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.baidu.action.RECOGNIZE_SPEECH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- end : baidu speech sdk -->
+        <service android:name="com.amap.api.location.APSService" />
+        <service android:name="com.justalk.cloud.juspush.MtcService" />
+
+        <!-- Mi -->
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+        <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.justalk.cloud.juspush.MiPushMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="grl.com.activities.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="grl.com.activities.loginRigister.LoginActivity"
+            android:configChanges="orientation"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.loginRigister.RegisterActivity"
+            android:configChanges="orientation"
+            android:label="@string/user_register"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.loginRigister.VerifyActivity"
+            android:configChanges="orientation"
+            android:label="@string/user_register"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.loginRigister.PassInputActivity"
+            android:configChanges="orientation"
+            android:label="@string/user_register"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.loginRigister.PNumberActivity"
+            android:configChanges="orientation"
+            android:label="@string/user_password_forget"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.loginRigister.PassResetActivity"
+            android:configChanges="orientation"
+            android:label="@string/user_password_forget"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.MainActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name="grl.com.activities.order.OrderActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="grl.com.activities.discovery.DiscoverySettingActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.NewEnergyActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.PhoneContactsActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.OrderGroupPlateActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.fGroup.FriendGroupActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.fGroup.FriendGroupCreateActivity"
+            android:label=""
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.energy.fGroup.FriendGroupMainActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.consult.ChatActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity android:name="grl.com.activities.consult.CallActivity"></activity>
+        <activity
+            android:name="com.justalk.cloud.juscall.CallActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="grl.com.activities.consult.ForwardActivity" />
+        <activity android:name="grl.com.activities.consult.FavouriteActivity" />
+        <activity android:name="grl.com.activities.consult.ChatInfoActivity" />
+        <activity android:name="grl.com.activities.consult.GiftActivity" />
+        <activity android:name="grl.com.activities.consult.NewsActivity" />
+        <activity
+            android:name="grl.com.activities.energy.fGroup.FGroupStatusActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.fGroup.FGroupEstActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.fGroup.FGroupHelpActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.fGroup.FGroupSettingActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.discovery.order.DiscoverOrderAcceptActivity"
+            android:configChanges="orientation"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.order.DiscoverOrderSolveActivity"
+            android:configChanges="orientation"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.popularity.PopularityMainActivity"
+            android:configChanges="orientation"
+            android:label="@string/popularity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.popularity.NewPopularityActivity"
+            android:configChanges="orientation"
+            android:label="@string/popularity_create"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.order.OrderStateActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.order.ReportActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.order.MyOrderActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.order.MyOrderDetailActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.order.MySolveDetailActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.discovery.order.SolutionSelectActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name="grl.com.activities.discovery.order.MyOrderChatActivity" />
+        <activity
+            android:name="grl.com.activities.order.RealTimeOrderActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="grl.com.activities.energy.tGroup.TGroupActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.energy.tGroup.TGroupPrepareActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name="grl.com.activities.energy.tGroup.TGroupEstimateActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name="grl.com.activities.energy.tGroup.challenge.TeacherChallengeActivity" />
+        <activity android:name="grl.com.activities.energy.tGroup.challenge.StudentChallengeActivity" />
+        <activity android:name="grl.com.activities.energy.tGroup.challenge.ChallengeRequestActivity" />
+        <activity android:name="grl.com.activities.energy.tGroup.challenge.ChallengeResponseActivity" />
+        <activity android:name="grl.com.activities.energy.tGroup.challenge.ChallengeDetailActivity" />
+        <activity
+            android:name="grl.com.activities.common.TextFieldEditerActivity"
+            android:label=""
+            android:theme="@style/Theme.App.Base"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.common.ContentShowActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.fGroup.FGroupInvitedSettingActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.discovery.MyInfoSettingActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.otherRel.OtherMainActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.otherRel.OtherInfoViewActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.otherRel.EnergyRequestActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.discovery.SetttingActivity"
+            android:label="" />
+        <activity android:name="grl.com.activities.discovery.popularity.RequestPKActivity" />
+        <activity android:name="grl.com.activities.discovery.popularity.MyExampleActivity" />
+        <activity android:name="grl.com.activities.discovery.popularity.ExampleActivity" />
+        <activity android:name="grl.com.activities.discovery.popularity.PopularUserRankActivity" />
+        <activity android:name="grl.com.activities.discovery.popularity.PopularStateActivity" />
+        <activity android:name="grl.com.activities.order.UserRankActivity" />
+        <activity
+            android:name="grl.com.activities.discovery.donate.DonateMainActivity"
+            android:label=""
+            android:theme="@style/Theme.App.Base" />
+        <activity
+            android:name="grl.com.activities.otherRel.OtherSettingActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.otherRel.OtherDescriptionActivity"
+            android:label=""
+            android:theme="@style/Theme.App.Base" />
+        <activity
+            android:name="grl.com.activities.discovery.crash.CrashActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.discovery.StarSettingActivity"
+            android:label="" />
+        <activity
+            android:name="grl.com.activities.energy.tGroup.league.LeagueActivity"
+            android:label="" />
+        <activity android:name="grl.com.activities.energy.tGroup.league.LeagueSettingActivity" />
+        <activity
+            android:name="grl.com.activities.energy.tGroup.TGroupDetailActivity"
+            android:label="" />
+        <activity android:name="grl.com.activities.search.GpsSearchActivity" />
+        <activity
+            android:name="grl.com.activities.common.MultilineTextEditerActivity"
+            android:theme="@style/Theme.App.Base"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name="grl.com.activities.energy.tGroup.league.FightDescriptionActivity" />
+        <activity android:name="grl.com.activities.imageManage.ImageCropActivity" />
+        <activity android:name="grl.com.activities.imageManage.UserPhotoSettingActivity" />
+        <activity android:name="grl.com.activities.discovery.profile.SelfProfileSettingActivity" />
+        <activity android:name="grl.com.activities.discovery.profile.VideoPlayActivity" />
+        <activity android:name="grl.com.activities.search.QRViewActivity" />
+        <activity android:name="grl.com.activities.search.QRScan.QRScanActivity" />
+        <activity android:name="grl.com.activities.imageManage.ImagePreviewActivity" />
+        <activity android:name="grl.com.activities.otherRel.OtherProfileActivity" />
+        <activity android:name="grl.com.activities.discovery.DisciplePriceActiviy" />
+        <activity android:name="grl.com.activities.search.PhoneSearchActivity" />
+        <activity android:name="grl.com.activities.map.MapSelectActivity" />
+        <activity android:name="grl.com.activities.map.MapDetailActivity" />
+        <activity android:name="grl.com.activities.imageManage.OtherDesImageActivity" />
+        <activity
+            android:name="grl.com.subViews.dialogues.PhotoCardDialog"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="grl.com.subViews.dialogues.DirectionDialog"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name="grl.com.activities.order.WorshipActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="grl.com.activities.order.ContactsSelectActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name="grl.com.activities.discovery.order.OtherOrderActivity" />
+        <activity android:name="grl.com.activities.discovery.order.OtherOrderAcceptActivity" />
+        <activity android:name="grl.com.activities.discovery.popularity.OtherPopularityActivity" />
+        <activity android:name="grl.com.activities.loginRigister.InfoInputActivity" />
+        <activity android:name="grl.com.activities.discovery.popularity.PopularityDetailActivity" />
+        <activity
+            android:name="grl.com.activities.discovery.PurchaseCoin.CashVerifyActivity"
+            android:theme="@style/Theme.App.Base"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="grl.com.activities.discovery.PurchaseCoin.PurchaseActivity"
+            android:theme="@style/Theme.App.Base"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name="grl.com.activities.discovery.accountSetting.AccountSettingActivity" />
+        <activity android:name="grl.com.activities.energy.fGroup.FGroupResActivity" />
+        <activity android:name="grl.com.activities.energy.tGroup.TGroupShowActivity" />
+        <activity android:name="grl.com.activities.energy.fGroup.FGroupMapActivity" />
+        <!-- <service -->
+        <!-- android:name="grl.com.services.MyPushIntentService" -->
+        <!-- android:process=":push" /> -->
+
+    </application>
+
+</manifest>

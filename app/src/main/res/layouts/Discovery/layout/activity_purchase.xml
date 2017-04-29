@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+    <include layout="@layout/layout_header"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/font17"
+            android:text="@string/purchase_title"/>
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/gold_img"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/etPurchaseCnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_weight="1"
+                android:singleLine="true" />
+            <Button
+                android:id="@+id/btnPurchase"
+                android:layout_width="@dimen/normal_btn_width"
+                android:layout_height="@dimen/normal_btn_height"
+                android:layout_weight="0"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/yellow_btn_selection"
+                android:textColor="@color/dark_gray_color"
+                android:text="@string/purchase_btn_title"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

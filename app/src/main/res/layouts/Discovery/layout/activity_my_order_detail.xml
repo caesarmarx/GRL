@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+
+    <!-- nav header -->
+    <include layout="@layout/layout_header"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_group_color"
+            android:orientation="vertical">
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/content_cell_height"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/samll_cell_height"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tv_order_type"
+                        style="@style/section_title_style"
+                        android:text="@string/order_type"/>
+                </LinearLayout>
+
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dip">
+
+                    <TextView
+                        android:id="@+id/tv_order_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/section_padding_size"
+                        android:text="@string/order_content"
+                        android:textSize="@dimen/font15"
+                        android:textColor="@color/light_gray_color"/>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/content_cell_height"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/samll_cell_height"
+                    android:gravity="center_vertical">
+                    <TextView
+                        style="@style/section_title_style"
+                        android:text="@string/order_solution"/>
+                </LinearLayout>
+
+                <include layout="@layout/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dip">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_solution_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/section_padding_size"
+                        android:textSize="@dimen/font15"
+                        android:background="@color/white"
+                        android:textColor="@color/light_gray_color">
+                    </android.support.v7.widget.RecyclerView>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+            <LinearLayout
+                android:id="@+id/linear_order_chat"
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_sub_btn_style"
+                    android:text="@string/order_chat" />
+            </LinearLayout>
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+            <LinearLayout
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_title_style"
+                    android:text="@string/order_submit_date"/>
+                <TextView
+                    android:id="@+id/tv_order_date"
+                    style="@style/section_value_style"/>
+            </LinearLayout>
+            <include layout="@layout/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="@dimen/section_padding_size"/>
+            <LinearLayout
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_title_style"
+                    android:text="@string/order_budget"/>
+                <TextView
+                    android:id="@+id/tv_order_budget"
+                    style="@style/section_value_style"/>
+            </LinearLayout>
+            <include layout="@layout/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="@dimen/section_padding_size"/>
+            <LinearLayout
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_title_style"
+                    android:text="@string/order_result_state"/>
+                <TextView
+                    android:id="@+id/tv_order_state"
+                    style="@style/section_value_style"/>
+            </LinearLayout>
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+            <LinearLayout
+                android:id="@+id/linear_order_state"
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_sub_btn_style"
+                    android:text="@string/order_state" />
+            </LinearLayout>
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+            <LinearLayout
+                android:id="@+id/linear_order_report"
+                style="@style/section_style">
+                <TextView
+                    style="@style/section_sub_btn_style"
+                    android:text="@string/order_report" />
+            </LinearLayout>
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

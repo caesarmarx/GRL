@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/layout_header" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:background="@color/list_group_color"
+        android:layout_height="@dimen/small_cell_height"
+        android:scrollbars="none">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:checkedButton="@+id/user_rank_road">
+
+            <RadioButton
+                android:id="@+id/user_rank_road"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font17"
+                android:text="@string/user_rank_road"/>
+            <RadioButton
+                android:id="@+id/user_rank_teacher"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font17"
+                android:text="@string/user_rank_teacher"/>
+            <RadioButton
+                android:id="@+id/user_rank_user"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font17"
+                android:text="@string/user_rank_user"/>
+            <RadioButton
+                android:id="@+id/user_rank_energy"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font17"
+                android:text="@string/user_rank_energy"/>
+            <RadioButton
+                android:id="@+id/user_rank_money"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font17"
+                android:text="@string/user_rank_money"/>
+            <RadioButton
+                android:id="@+id/user_rank_fee"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font17"
+                android:text="@string/user_rank_fee"/>
+            <Button
+                android:id="@+id/user_search"
+                style="@style/menu_radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font17"
+                android:text="@string/user_rank_search"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/small_cell_height"
+        android:background="@android:color/white"
+        android:layoutDirection="rtl"
+        android:layout_gravity="center_vertical">
+        <Button
+            android:id="@+id/btn_worship"
+            style="@style/normal_btn_style"
+            android:layout_marginLeft="@dimen/cell_padding"
+            android:layout_marginRight="@dimen/cell_padding"
+            android:layout_width="@dimen/small_btn_width"
+            android:layout_height="@dimen/normal_btn_height"
+            android:layout_gravity="center"
+            android:text="@string/tgroup"/>
+        <TextView
+            android:id="@+id/tv_user_rank"
+            android:layout_width="1dp"
+            android:layout_weight="0.7"
+            android:paddingLeft="@dimen/cell_padding"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textSize="@dimen/font17"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
+
+            <!-- 普通底部导航 -->
+
+            <RadioGroup
+                android:id="@+id/main_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/yellowBack"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/rank_area_all">
+
+                <RadioButton
+                    android:id="@+id/rank_area_all"
+                    style="@style/tab_radio_btn_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="@string/area_all"
+                    android:padding="3dp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rank_same_city"
+                    style="@style/tab_radio_btn_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="@string/same_city"
+                    android:padding="3dp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rank_near_by"
+                    style="@style/tab_radio_btn_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="@string/near_by"
+                    android:padding="3dp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rank_tgroup"
+                    style="@style/tab_radio_btn_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="@string/tgroup"
+                    android:padding="3dp" >
+                </RadioButton>
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/user_rank_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:background="@color/white">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

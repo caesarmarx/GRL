@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/large_cell_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_user_photo"
+        style="@style/img_photo_round"
+        app:riv_corner_radius="@dimen/normal_radius"
+        app:riv_oval="false"
+        android:layout_width="@dimen/samll_cell_height"
+        android:layout_height="@dimen/samll_cell_height"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/border_margin"
+        android:layout_centerVertical="true"
+        android:src="@drawable/user_default"
+        android:contentDescription="test"/>
+
+    <RelativeLayout
+        android:layout_toEndOf="@id/img_user_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/tv_order_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="7dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font15"/>
+
+        <TextView
+            android:id="@+id/tv_grl_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="7dp"
+            android:textColor="@color/light_gray_color"
+            android:textSize="@dimen/font13"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_order_state"
+        android:layout_width="60dp"
+        android:layout_height="@dimen/small_btn_height"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/yellow_btn_selection"
+        android:textSize="@dimen/font17"
+        android:textColor="@color/light_gray_color"
+        android:textAlignment="center"
+        android:text="@string/order_accept"/>
+
+    <include layout="@layout/layout_border"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/border_margin"/>
+
+</RelativeLayout>

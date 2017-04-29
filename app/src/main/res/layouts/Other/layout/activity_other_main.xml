@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/order_background"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+
+    <!-- header view -->
+    <include layout="@layout/layout_header"
+        android:id="@+id/view_header"/>
+
+    <!-- planet view -->
+    <RelativeLayout
+        android:layout_below="@id/view_header"
+        android:layout_above="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/order_background_discover">
+
+        <grl.com.subViews.star.PlanetShowView
+            android:id="@+id/planet_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </grl.com.subViews.star.PlanetShowView>
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_user_photo"
+            style="@style/img_photo_round"
+            app:riv_oval="true"
+            app:riv_border_color="@color/yellowBack"
+            app:riv_border_width="1dip"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_default"
+            android:contentDescription="test"/>
+
+    </RelativeLayout>
+
+
+    <!-- content view -->
+    <LinearLayout
+        android:id="@id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/normal_section_row"/>
+        <TextView
+            android:id="@+id/tvOtherInfo"
+            style="@style/TxtTitle"
+            android:layout_height="@dimen/samll_cell_height"
+            android:textSize="@dimen/font17"
+            android:gravity="center_vertical"
+            android:background="@drawable/setting_item_selector"
+            android:layout_width="fill_parent"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:paddingRight="@dimen/row_view_margin"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/border_margin"
+            android:drawableRight="@drawable/right"
+            android:text="@string/other_info_title" />
+        <include layout="@layout/normal_section_row"/>
+
+        <TextView
+            android:id="@+id/tvOtherOrder"
+            style="@style/TxtTitle"
+            android:layout_height="@dimen/samll_cell_height"
+            android:textSize="@dimen/font17"
+            android:gravity="center_vertical"
+            android:background="@drawable/setting_item_selector"
+            android:layout_width="fill_parent"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:paddingRight="@dimen/row_view_margin"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/border_margin"
+            android:drawableRight="@drawable/right"
+            android:text="@string/other_order_title" />
+        <include layout="@layout/layout_border"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/border_margin"/>
+        <TextView
+            android:id="@+id/tvOtherTGroup"
+            style="@style/TxtTitle"
+            android:layout_height="@dimen/samll_cell_height"
+            android:textSize="@dimen/font17"
+            android:gravity="center_vertical"
+            android:background="@drawable/setting_item_selector"
+            android:layout_width="fill_parent"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:paddingRight="@dimen/row_view_margin"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/border_margin"
+            android:drawableRight="@drawable/right"
+            android:text="@string/other_fgroup_title" />
+        <include layout="@layout/layout_border"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/border_margin"/>
+        <TextView
+            android:id="@+id/tvOtherCheer"
+            style="@style/TxtTitle"
+            android:layout_height="@dimen/samll_cell_height"
+            android:textSize="@dimen/font17"
+            android:gravity="center_vertical"
+            android:background="@drawable/setting_item_selector"
+            android:layout_width="fill_parent"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:paddingRight="@dimen/row_view_margin"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/border_margin"
+            android:drawableRight="@drawable/right"
+            android:text="@string/other_cheer_title" />
+        <include layout="@layout/layout_border"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_group_color"
+            android:orientation="vertical">
+    `<Button
+            android:id="@+id/btnChat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/samll_cell_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/func_btn_margin"
+            android:layout_marginLeft="@dimen/func_btn_margin"
+            android:layout_marginRight="@dimen/func_btn_margin"
+            android:background="@drawable/yellow_btn_selection"
+            android:textSize="@dimen/font17"
+            android:textColor="@color/dark_gray_color"
+            android:text="@string/other_chat_title"/>
+            <Button
+                android:id="@+id/btnRequest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/samll_cell_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/func_btn_margin"
+                android:layout_marginBottom="@dimen/func_btn_margin"
+                android:layout_marginLeft="@dimen/func_btn_margin"
+                android:layout_marginRight="@dimen/func_btn_margin"
+                android:background="@drawable/round_button_fill_border"
+                android:textSize="@dimen/font17"
+                android:textColor="@android:color/black"
+                android:text="@string/other_request_title"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

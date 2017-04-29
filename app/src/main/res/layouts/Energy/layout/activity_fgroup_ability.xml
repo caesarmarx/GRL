@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_header"
+        android:id="@+id/view_header"/>
+
+    <LinearLayout
+        android:id="@+id/first_section_view"
+        android:layout_below="@id/view_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include layout="@layout/normal_section_row"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_fgroup_feature"
+        android:layout_below="@id/first_section_view"
+        android:layout_height="@dimen/samll_cell_height"
+        android:layout_width="fill_parent"
+        style="@style/TxtTitle"
+        android:background="@drawable/setting_item_selector"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/row_view_margin"
+        android:paddingRight="@dimen/row_view_margin"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:drawableRight="@drawable/right"
+        android:text="@string/fgroup_feature_title" />
+    <include layout="@layout/layout_border"
+        android:id="@+id/view_border"
+        android:layout_below="@id/tv_fgroup_feature"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/tv_fgroup_map"
+        android:layout_below="@id/view_border"
+        android:layout_height="@dimen/samll_cell_height"
+        android:layout_width="fill_parent"
+        style="@style/TxtTitle"
+        android:background="@drawable/setting_item_selector"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/row_view_margin"
+        android:paddingRight="@dimen/row_view_margin"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:drawableRight="@drawable/right"
+        android:text="@string/fgroup_map_title" />
+    <LinearLayout
+        android:id="@+id/layout_bar"
+        android:layout_below="@id/tv_fgroup_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include layout="@layout/normal_section_row"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="vertical"/>
+</RelativeLayout>

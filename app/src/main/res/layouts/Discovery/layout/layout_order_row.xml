@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_user_photo"
+        style="@style/img_photo_round"
+        app:riv_corner_radius="@dimen/normal_radius"
+        app:riv_oval="false"
+        android:layout_width="@dimen/samll_cell_height"
+        android:layout_height="@dimen/samll_cell_height"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/border_margin"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/user_default"
+        android:contentDescription="test"/>
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_alignLeft="@id/img_user_photo"
+        android:layout_alignRight="@id/img_user_photo"
+        android:ellipsize="end"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginRight="-5dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font13"/>
+
+    <RelativeLayout
+        android:layout_toEndOf="@id/img_user_photo"
+        android:layout_toStartOf="@id/btn_order_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginRight="70dp">
+
+        <TextView
+            android:id="@+id/tv_order_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="7dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font15"/>
+
+        <TextView
+            android:id="@+id/tv_grl_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:ellipsize="end"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/light_gray_color"
+            android:textSize="@dimen/font13"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_order_accept"
+        style="@style/small_btn_style"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/light_gray_color"
+        android:text="@string/order_accept"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_accept_already"
+        style="@style/small_btn_style"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/already_accept"
+        android:textColor="@color/light_gray_color"
+        android:background="@drawable/round_fill_border_yellow"/>
+
+    <include layout="@layout/layout_border"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/border_margin"/>
+
+</RelativeLayout>

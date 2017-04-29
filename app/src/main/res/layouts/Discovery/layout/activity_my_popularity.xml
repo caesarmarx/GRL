@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/layout_header" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:background="@color/list_group_color"
+        android:layout_height="@dimen/small_cell_height"
+        android:scrollbars="none">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/btn_my_order">
+            <RadioButton
+                style="@style/menu_radio_btn_style"
+                android:layout_width="120dp"
+                android:layout_weight="1"
+                android:text="@string/my_order_menu"/>
+            <RadioButton
+                style="@style/menu_radio_btn_style"
+                android:layout_width="120dp"
+                android:layout_weight="1"
+                android:text="@string/my_order_menu"/>
+            <RadioButton
+                style="@style/menu_radio_btn_style"
+                android:layout_width="120dp"
+                android:layout_weight="1"
+                android:text="@string/my_order_menu"/>
+            <RadioButton
+                style="@style/menu_radio_btn_style"
+                android:layout_width="120dp"
+                android:layout_weight="1"
+                android:text="@string/my_order_menu"/>
+            <RadioButton
+                style="@style/menu_radio_btn_style"
+                android:layout_width="120dp"
+                android:layout_weight="1"
+                android:text="@string/my_order_menu"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_est_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/my_popularity_comment"
+            android:textSize="@dimen/font15"
+            android:textColor="@color/light_gray_color"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_popularity_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

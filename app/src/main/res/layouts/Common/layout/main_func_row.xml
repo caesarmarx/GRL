@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="@dimen/large_cell_height"
+    android:background="@drawable/setting_item_selector">
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TxtTitle"
+        android:layout_height="@dimen/large_cell_height"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="@dimen/row_view_margin"
+        android:layout_marginRight="@dimen/row_view_margin"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:drawableRight="@drawable/right"
+        android:text="happy" />
+    <TextView
+        android:id="@+id/tv_unread"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/aii"
+        android:gravity="center"
+        android:layout_marginRight="8dp"
+        android:text="7"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+    <include layout="@layout/layout_border"
+        android:id="@+id/view_border"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

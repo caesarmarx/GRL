@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:background="@color/yellowBack" >
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_user_search"/>
+
+        <LinearLayout
+            android:id="@+id/ll_real_order"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_toRightOf="@+id/img_left"
+            android:layout_toLeftOf="@+id/img_right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/order_press_speak_btn"
+            android:layoutDirection="rtl">
+
+            <Button
+                android:id="@+id/btn_real_drop"
+                android:layout_width="25dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/order_realtime_right"/>
+
+            <TextView
+                android:id="@+id/tv_real_thumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                android:hint="@string/realtime_comment"
+                android:textColorHint="@color/light_gray_color"
+                android:textSize="@dimen/font17"/>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_user_list" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/submit_view"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="-48dp"
+        android:background="@color/yellowBack"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_set_mode_voice"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/sound_btn"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/btn_set_mode_keyboard"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/keyboard_btn_black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/btn_press_to_speak"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/round_fill_white_with_border"
+                android:text="@string/button_pushtotalk"
+                android:minHeight="30dp"
+                android:textSize="16sp"
+                android:visibility="gone">
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/edittext_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:visibility="visible">
+
+                <grl.com.subViews.edittext.OrderEditText
+                    android:id="@+id/edittext_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_fill_white"
+                    android:maxLines="3"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:minHeight="30dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:imeOptions="actionSend"/>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/order_show_user_btn"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/order_submit_user"/>
+            <Button
+                android:id="@+id/order_show_budget_btn"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/order_submit_budget"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <include layout="@layout/layout_bottom"/>
+
+</LinearLayout>

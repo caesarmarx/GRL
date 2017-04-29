@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/contactitem_layout"
+        style="@style/MMListItem"
+        android:gravity="top"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dip" >
+
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="80.0dip"
+            android:layout_height="40.0dip"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font20"
+            android:text="今天"/>
+
+        <LinearLayout
+            android:id="@+id/layout_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_add"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="-40dp"
+                android:src="@drawable/image_add_btn"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是多幸福啊！辛苦了亲爱的！么么哒！~"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/font17"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:id="@+id/layout_photo"
+                android:layout_below="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/img_photo"
+                    android:layout_width="90.0dp"
+                    android:layout_height="90.0dp"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sure_man"
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_photo"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font15"/>
+
+            <LinearLayout
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/tv_sure_man"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="80dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_praise_total"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font15"/>
+
+                <TextView
+                    android:id="@+id/tv_estimate_total"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font15"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:background="@color/list_group_color"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+</LinearLayout>

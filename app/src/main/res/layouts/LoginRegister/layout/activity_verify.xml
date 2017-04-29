@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/order_background"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/yellowBack" >
+
+        <TextView
+            android:id="@+id/txt_back"
+            style="@style/txt_titleStyle1"
+            android:textSize="15sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:text="@string/user_nav_back"/>
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="40dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/txt_titleStyle1"
+            android:text="@string/user_register"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="60%"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="50%"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/verfiyComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:text="@string/user_register_comment"
+                android:textColor="@color/login_comment_color"
+                android:textAlignment="center"
+                android:textSize="@dimen/font15"/>
+
+        </RelativeLayout>
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="50%"
+            android:layout_alignParentBottom="true">
+
+            <EditText
+                android:id="@+id/userVerifyCode"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:maxLength="4"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="number"
+                android:textCursorDrawable="@null"
+                android:textAlignment="center"
+                android:textColorHint="@color/black_placehold_color"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font17"
+                android:background="@drawable/round_nofill_white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@+id/userVerifyCode"
+                android:layout_marginTop="40dp"
+                android:text="@string/user_verify_bottom"
+                android:textColor="@color/login_comment_color"
+                android:textSize="@dimen/font15"/>
+
+
+            <Button
+                android:id="@+id/verifyNextBtn"
+                android:background="@drawable/user_login_bottom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@+id/centerView"/>
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentRelativeLayout>

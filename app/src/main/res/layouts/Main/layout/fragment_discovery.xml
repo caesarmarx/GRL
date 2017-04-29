@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_group_color">
+    <include layout="@layout/normal_section_row"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_section_height"/>
+    <TextView
+        android:id="@+id/tv_order"
+        style="@style/TxtTitle"
+        android:layout_height="@dimen/large_cell_height"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:background="@drawable/setting_item_selector"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/main_func_padding"
+        android:paddingRight="@dimen/main_func_padding"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:drawableRight="@drawable/right"
+        android:text="@string/order_title" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <include layout="@layout/layout_border"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/border_margin"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_cheer"
+        style="@style/TxtTitle"
+        android:layout_height="@dimen/large_cell_height"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:background="@drawable/setting_item_selector"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/main_func_padding"
+        android:paddingRight="@dimen/main_func_padding"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:drawableRight="@drawable/right"
+        android:text="@string/cheer_title" />
+    <include layout="@layout/normal_section_row"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_section_height"/>
+    <TextView
+        android:id="@+id/tv_crash"
+        style="@style/TxtTitle"
+        android:layout_height="@dimen/large_cell_height"
+        android:textSize="@dimen/font17"
+        android:gravity="center_vertical"
+        android:background="@drawable/setting_item_selector"
+        android:layout_width="fill_parent"
+        android:paddingLeft="@dimen/main_func_padding"
+        android:paddingRight="@dimen/main_func_padding"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/border_margin"
+        android:drawableRight="@drawable/right"
+        android:text="@string/crash_title" />
+    <include layout="@layout/layout_border"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</LinearLayout>

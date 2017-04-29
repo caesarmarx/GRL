@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/large_cell_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/setting_item_selector">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/user_photo"
+            android:layout_width="@dimen/normal_imageview_size"
+            android:layout_height="@dimen/normal_imageview_size"
+            android:layout_marginLeft="21dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/user_default"
+            app:riv_corner_radius="@dimen/normal_radius"
+            app:riv_oval="false"/>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:textSize="@dimen/font15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:text="" />
+        <TextView
+            android:id="@+id/txt_user_energy"
+            android:textColor="@color/light_gray_color"
+            android:textSize="@dimen/font15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text=""/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/font15"
+        android:textColor="@color/light_gray_color"
+        android:text="@string/fgroup_energy_empty"
+        android:gravity="center"
+        android:visibility="gone"/>
+    <include layout="@layout/layout_border"
+        android:id="@+id/layout_border"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/border_margin"/>
+</RelativeLayout>

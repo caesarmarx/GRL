@@ -1,0 +1,547 @@
+<resources>
+    <string name="app_name">贵人令</string>
+
+    <string name="JusTalkCloud_AppKey">6c06d1b0d9015e47ec144097</string>
+    <string name="MiPush_AppId">2882303761517416129</string>
+    <string name="MiPush_AppKey">5211741695129</string>
+
+    <string name="gcm_sender_id">527225413725</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- splash activity -->
+    <string name="splash_slogan">打 开 你 的 小 宇 宙</string>
+
+    <!-- common string -->
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="more_title">•••</string>
+    <string name="request">邀加</string>
+    <string name="input_user_name">请加入名字</string>
+    <string name="input_phone_number">请加入手机号</string>
+    <string name="donate_req_toast">创建成功</string>
+    <string name="user_info_title">资源</string>
+    <string name="textfield_alert">请加入</string>
+    <string name="done">完成</string>
+    <string name="photo_title">照片</string>
+    <string name="tab">\u0009\u0009\u0009</string>
+
+    <!-- User Login / Register -->
+    <string name="user_login">登 录</string>
+    <string name="user_register">注 册</string>
+    <string name="user_phonenumber">手机号</string>
+    <string name="user_password">密 码</string>
+    <string name="user_password_forget">忘记登录</string>
+    <string name="user_login_problem">遇到问题</string>
+
+    <string name="user_register_comment">确认注册表示您已阅读并遵守</string>
+    <string name="user_pnumber_comment">通过手机号验证码登录贵人令</string>
+    <string name="user_repass_comment">请设置贵人令密吗，之后你可以用手机号</string>
+    <string name="user_grl_rule">《贵人盟约》</string>
+    <string name="user_service_agree">《服务协议》</string>
+    <string name="user_register_placeholder">请输入手机号码</string>
+    <string name="user_password_placeholder">请输入密码码</string>
+    <string name="user_repass_password_placeholder">请设置贵人令密码</string>
+    <string name="user_repass_confirm_placeholder">请再次输入</string>
+    <string name="user_verify_bottom">重新发送验证码</string>
+
+    <string name="login_ok">Login OK</string>
+    <string name="login_failed">Login Failed</string>
+
+    <!-- navigation bar back -->
+    <string name="user_nav_back">返回</string>
+
+    <!-- tab string -->
+    <string name="tab_order_title">贵人</string>
+    <string name="tab_chat_title">问道</string>
+    <string name="tab_energy_title">势力</string>
+    <string name="tab_discorvery_title">令趣</string>
+
+    <!-- menu item string -->
+    <string name="menu_gps_search">指针找人</string>
+    <string name="menu_phone_search">手机号</string>
+    <string name="menu_qr_search">扫一扫</string>
+    <string name="menu_qr_show">打开二维码</string>
+
+    <!-- energy_tab view -->
+    <string name="new_energy_title">新能量</string>
+    <string name="order_plate_title">令牌圈</string>
+    <string name="friend_group_title">贵人圈</string>
+    <string name="tgroup_title">师徒圈</string>
+    <string name="order_assist_title">令牌权限</string>
+    <string name="order_power_title">号召力</string>
+    <string name="order_group_first_section_title">响应最快的前十名</string>
+    <string name="order_group_second_section_title">响应最多的前十名</string>
+    <string name="order_group_third_section_title">成交最多的前十名</string>
+    <string name="friend_create">创建贵人圈</string>
+    <string name="created_fgroup_title">我加入的贵人圈</string>
+    <string name="invited_fgroup_title">我创建的贵人圈</string>
+    <string name="create_title">创建</string>
+    <string name="fgroup_create_hint">创建名称</string>
+    <string name="fgroup_ability_title">能势</string>
+    <string name="fgroup_est_title">评定</string>
+    <string name="fgroup_help_title">求助</string>
+    <string name="fgroup_setting_title">圈规</string>
+    <string name="fgroup_feature_title">能势特点</string>
+    <string name="fgroup_map_title">势力地图</string>
+    <string name="fgroup_help_btn">发布</string>
+    <string name="fgroup_rule_title">本圈准则</string>
+    <string name="fgroup_post_title">本圈公告</string>
+    <string name="fgroup_setting">本圈设置</string>
+    <string name="fgroup_nick_name">我昵称设置</string>
+    <string name="fgroup_chat_clear">清空聊天</string>
+    <string name="fgroup_post">举报</string>
+    <string name="fgroup_order_amount">扣除令牌</string>
+    <string name="fgroup_member_info">我的资源</string>
+    <string name="fgroup_quit_other">辞退</string>
+    <string name="fgroup_neck_switch">显示成员昵称</string>
+    <string name="fgroup_my_nick">我的昵称</string>
+    <string name="fgroup_my_Info">我的资源</string>
+    <string name="fgroup_exit_btn">退出</string>
+    <string name="fgroup_est_up_title">顶100</string>
+    <string name="fgroup_est_list_title">▼</string>
+    <string name="fgroup_est_down_title">踩20</string>
+    <string name="fgroup_est_indes_list_title">评定内容</string>
+
+    <!-- Energy / TGroup view -->
+    <string name="tgroup_prepare_title">备课</string>
+    <string name="tgroup_lesson_title">课中</string>
+    <string name="tgroup_league_title">实训</string>
+    <string name="tgroup_estimate_title">点评</string>
+    <string name="tgroup_challenge_title">挑战</string>
+
+    <string name="save_success">保存完了</string>
+    <string name="my_tgroup">我的老们</string>
+
+    <string name="tgroup_prepare_enter_title">人学评估</string>
+    <string name="tgroup_prepare_rule_title">教学规则</string>
+    <string name="tgroup_prepare_material_title">教材安排</string>
+    <string name="tgroup_prepare_time_title">课表安排</string>
+
+    <string name="tgroup_estimate">评估</string>
+    <string name="tgroup_estimate_placeholder">根据师父的专业、敬业及互动\n帮服等方面做出点评</string>
+    <string name="teacher">师父</string>
+    <string name="student">徒弟</string>
+
+    <string name="my_estimate">我的评估</string>
+    <string name="other_estimate">自我评估</string>
+
+    <string name="lesson_estimate_hint">从专业基础、从业时间、进步速率、未来适宜方向、期望成就高度等方面加以评定</string>
+
+    <string name="good">好</string>
+    <string name="normal">中</string>
+    <string name="bad">差</string>
+    <string name="already_estimate">已点评</string>
+
+    <string name="url">URL</string>
+    <string name="upload">下载</string>
+    <string name="download">上传</string>
+
+    <!-- Challenge -->
+    <string name="challenge_log">历史战绩及胜率/本城排名</string>
+    <string name="challenge_money">总捐赠量/本城排名</string>
+    <string name="challenge_goal">规则</string>
+    <string name="challenge_rule">目标</string>
+    <string name="challenge_request">我要挑战</string>
+    <string name="challenge_response">我的战书</string>
+    <string name="challenge_notify">公式</string>
+    <string name="challenge_card">挑战赛</string>
+
+    <string name="challenge_request_side">挑战方</string>
+    <string name="challenge_response_side">应战方</string>
+
+    <string name="challenge_est_name">挑战项目</string>
+    <string name="challenge_budget">参捐额度</string>
+    <string name="challenge_time">起止时间</string>
+    <string name="challenge_state">状态</string>
+    <string name="challenge_contribute">贡献率</string>
+    <string name="challenge_input_notify">购买公式</string>
+
+    <string name="challenge_request_tab">挑战书</string>
+    <string name="challenge_response_tab">应战书</string>
+
+    <string name="challenge_start_state">应战期</string>
+    <string name="challenge_running_state">战争期</string>
+    <string name="challenge_end_state">已结束</string>
+
+    <string name="challenge_wait">等候</string>
+    <string name="challenge_accept">接受</string>
+    <string name="challenge_decline">拒绝</string>
+    <string name="challenge_attend">参加</string>
+    <string name="challenge_win">胜利</string>
+    <string name="challenge_defeat">失败</string>
+
+    <string name="input_challenge_budget">请加入参捐额度</string>
+
+    <!-- discovery tab view -->
+    <string name="order_title">贵人令</string>
+    <string name="cheer_title">气  场</string>
+    <string name="crash_title">碰一碰</string>
+    <string name="my_info_title">我的料</string>
+    <string name="my_order_title">我的令</string>
+    <string name="my_cheer_title">我气场</string>
+    <string name="donate_title">慈善通</string>
+    <string name="setting_title">设  置</string>
+    <string name="me_title">我</string>
+    <string name="profile_title">路演</string>
+    <string name="donate_request_tab">求助</string>
+    <string name="donate_help_tab">帮助</string>
+    <string name="donate_history_tab">慈录</string>
+
+    <!-- user info setting string -->
+    <string name="user_photo_titleq">头像</string>
+    <string name="user_name_title">名字</string>
+    <string name="user_nick_title">绰号</string>
+    <string name="user_cert_title">认证</string>
+    <string name="user_price_title">徒金</string>
+    <string name="user_gender_title">性别</string>
+    <string name="user_area_title">地区</string>
+    <string name="user_skill_title">专长</string>
+    <string name="user_job_title">职业</string>
+    <string name="user_energy_title">能量</string>
+    <string name="user_donate_title">募捐</string>
+    <string name="user_est_title">评价</string>
+    <string name="user_complete_title">成交</string>
+    <string name="user_account_title">账户</string>
+    <string name="user_status_setting">接单</string>
+    <string name="user_gps_setting">位 置</string>
+    <string name="user_star_title">贵 星</string>
+    <string name="purchas_order_plate">购 牌</string>
+    <string name="user_profile">路 演</string>
+    <string name="log_out">退 出</string>
+    <string name="user_status_des">随时接令赚赏金</string>
+
+    <!-- Order View -->
+    <string name="realtime_comment">来令请接单</string>
+
+    <string name="button_pushtotalk">按住说话</string>
+    <string name="user_skill">传长</string>
+
+    <string name="area_all">全部</string>
+    <string name="city_all">本城</string>
+    <string name="gender_all">全部</string>
+    <string name="gender_man">男生</string>
+    <string name="gender_woman">女生</string>
+    <string name="submit_phone_placeholder">用户名/贵人号/手机号</string>
+    <string name="direction">定向</string>
+
+    <string name="btn_ok">确定</string>
+    <string name="btn_cancel">取消</string>
+
+    <string name="order_accept">创令</string>
+    <string name="already_accept">已创</string>
+    <string name="order_discuss">竟令</string>
+    <string name="order_resend">传令</string>
+    <string name="order_solve">解令</string>
+    <string name="solution_select">选择锦囊</string>
+
+    <string name="order_type">贵人类型</string>
+    <string name="order_content">需求内容</string>
+    <string name="order_solution">锦囊</string>
+    <string name="order_submit_date">发令日期</string>
+    <string name="order_budget">赏金</string>
+    <string name="order_state">状态</string>
+    <string name="order_result_state">结果</string>
+    <string name="order_report">举报</string>
+    <string name="order_state_time">起止时间</string>
+    <string name="order_state_goal">完成目标</string>
+    <string name="order_state_effect">效果及标准</string>
+    <string name="order_state_location">地点</string>
+    <string name="order_date">令时间</string>
+
+    <string name="new_order_menu">陌生来令</string>
+    <string name="tgroup_order_menu">师徒来令</string>
+    <string name="my_order_menu">我发的令</string>
+    <string name="my_solution_menu">我的锦囊</string>
+    <string name="other_solution">他的锦囊</string>
+
+    <string name="user_rank_road">路演</string>
+    <string name="user_rank_teacher">拜师</string>
+    <string name="user_rank_user">贵人</string>
+    <string name="user_rank_energy">能量</string>
+    <string name="user_rank_money">募捐</string>
+    <string name="user_rank_fee">徒金</string>
+
+    <string name="user_rank_search">搜索</string>
+
+    <string name="user_worship">预拜</string>
+
+    <string name="same_city">同城</string>
+    <string name="near_by">附近</string>
+    <string name="tgroup">师圈</string>
+
+    <string name="min_distance">最小距离</string>
+    <string name="max_distance">最大距离</string>
+
+    <string name="gps_search_title">指针找人</string>
+    <string name="user_rank_title">贵人榜</string>
+
+    <string name="search">搜索</string>
+
+    <string name="order_chat">说令</string>
+    <string name="order_accept_list">令众</string>
+
+    <string name="solve_select">选择</string>
+    <string name="solve_cancel">不选择</string>
+    <string name="solve_wait">等候</string>
+
+    <string name="submit_order_ok">发令完了</string>
+    <string name="submit_order_fail">发令失败</string>
+    <!-- Popularity -->
+    <string name="popularity">气场</string>
+    <string name="teacher_popularity">师徒气场</string>
+    <string name="my_popularity">我气场</string>
+    <string name="popularity_create">建我气场</string>
+    <string name="sure_man">证人</string>
+    <string name="popularity_placeholder">记录一点：你的气场超乎你想象</string>
+    <string name="img_have_or_not">有图有真相</string>
+    <string name="my_popularity_comment">团队合作是成公的第一保障</string>
+
+    <string name="menu_request_pk">邀PK</string>
+    <string name="menu_example_list">榜样</string>
+    <string name="menu_exmaple_to_me">榜粉</string>
+    <string name="menu_popular_rank">贵人堂</string>
+    <string name="menu_popular_state">状态</string>
+
+    <string name="no_data">没有</string>
+
+    <string name="popularity_estimate">评论</string>
+    <string name="popularity_praise">赞</string>
+
+    <string name="popularity_new">发布</string>
+
+    <string name="menu_pk">PK</string>
+    <string name="dlg_accept_btn">接受</string>
+    <string name="dlg_decline_btn">下降</string>
+
+
+    <!-- Consult / Chat -->
+    <string name="today_chat_result">本日业绩</string>
+    <string name="msg_img_text">[图片]</string>
+    <string name="msg_video_text">[视频]</string>
+    <string name="msg_voice_text">[语音]</string>
+    <string name="msg_location_text">[位置]</string>
+
+
+    <string name="button_send">发送</string>
+    <string name="attach_picture">图片</string>
+    <string name="attach_take_pic">拍照</string>
+    <string name="attach_location">位置</string>
+    <string name="attach_file">文件</string>
+    <string name="attach_voice_call">语音电话</string>
+    <string name="attach_video_call">视频通话</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="send_fail">发送消息失败,</string>
+    <string name="Whether_to_empty_all_chats">是否清空所有聊天记录</string>
+    <string name="Send_voice_need_sdcard_support">发送语音需要sdcard支持</string>
+    <string name="Recording_without_permission">无录音权限</string>
+    <string name="The_recording_time_is_too_short">录音时间太短</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="unable_to_get_loaction">无法获取到您的位置信息!</string>
+    <string name="send_failure_please">发送失败，请检测服务器是否连接</string>
+    <string name="sd_card_does_not_exist">SD卡不存在，不能拍照</string>
+    <string name="Into_the_blacklist">移入到黑名单？</string>
+    <string name="connect_failuer_toast">请检查网络或稍候重试</string>
+
+    <string name="Have_downloaded">已下载</string>
+    <string name="Did_not_download">未下载</string>
+
+    <string name="agree">同意</string>
+
+    <string name="group_chat">群聊</string>
+    <string name="not_download">未下载:</string>
+    <string name="text_ack_msg">已读</string>
+    <string name="text_delivered_msg">送达</string>
+
+    <string name="delete">删除</string>
+    <string name="resend">重新发送</string>
+    <string name="confirm_resend">您确认要重新发送该信息？</string>
+
+    <string name="Is_download_voice_click_later">正在下载语音，稍后点击</string>
+    <string name="Send_the_following_pictures">发送以下图片？</string>
+
+    <string name="location_recv">[分享一个地理位置]</string>
+    <string name="image_recv">[发来一张图片]</string>
+    <string name="video_recv">[发来一段视频]</string>
+    <string name="voice_recv">[发来一段语音]</string>
+
+    <string name="location_message">[位置信息]</string>
+    <string name="recording_video">[录制视频]</string>
+    <string name="location_prefix">[我的位置]</string>
+    <string name="picture">[图片消息]</string>
+    <string name="video">[视频通话]</string>
+    <string name="file">[文件消息]</string>
+    <string name="voice_call">[语音通话]</string>
+    <string name="voice_msg">[语音消息]</string>
+    <string name="voice">[声音]</string>
+
+    <string name="my_contacts_title">邀加手机联系人</string>
+
+    <string name="chat_target">收费对家</string>
+    <string name="chat_time_rule">计时规则</string>
+    <string name="chat_estimate_rule">点评规则</string>
+    <string name="chat_judge_rule">评优规则</string>
+
+    <string name="my_block_string">他在我的黑名单</string>
+    <string name="your_block_string">我在他的黑名单</string>
+    <string name="my_disturb_string"></string>
+    <string name="you_disturb_string"></string>
+
+    <string name="gift_list">礼品列表</string>
+    <string name="news_list">礼品列表</string>
+
+    <!-- other activity string -->
+    <string name="other_info_title">他的料</string>
+    <string name="other_order_title">他的令</string>
+    <string name="other_fgroup_title">他师徒</string>
+    <string name="other_cheer_title">他气场</string>
+    <string name="other_chat_title">发起问道</string>
+    <string name="other_request_title">邀加能量</string>
+    <string name="energy_request_teacher">+拜师</string>
+    <string name="energy_request_disciple">+收徒</string>
+    <string name="energy_request_grl">+贵人</string>
+    <string name="energy_request_group">+贵友圈</string>
+
+    <!-- donate activity string -->
+    <string name="donate_request_hint">你需要哪方面慈善帮助</string>
+    <string name="donate_request_phone_title">证实你需求真实性电话</string>
+    <string name="request_title">申请</string>
+    <string name="donate_help_top_title">求助真实确认</string>
+    <string name="donate_help_top_alert">没有求助真实确认</string>
+    <string name="donate_help_down_title">认领求助者</string>
+    <string name="donate_help_down_aler">没有认领求助者</string>
+    <string name="donate_history_first_title">我认领的</string>
+    <string name="donate_history_second_title">认领我的</string>
+    <string name="donate_history_third_title">我的捐赠</string>
+    <string name="donate_history_fourth_title">我的受助</string>
+    <string name="donate_history_alert">没有慈录</string>
+    <string name="donate_request_confirm">确认</string>
+    <string name="donate_request_claim">认领</string>
+
+    <!-- other setting activity string -->
+    <string name="other_description">设置对方备注</string>
+    <string name="connection_title">解除关系</string>
+    <string name="other_setting_title">资料设置</string>
+    <string name="alias_title">备注名</string>
+    <string name="alias_hint">添加备注名</string>
+    <string name="add_phone_title">电话号码</string>
+    <string name="add_phone_hint">添加电话号码</string>
+    <string name="des_title">描述</string>
+    <string name="des_et_hint">添加更多备注信息</string>
+    <string name="des_img_hint">添加图片</string>
+    <string name="relation_block">加黑名单</string>
+    <string name="relation_dnd">免打扰</string>
+
+    <!-- teacher-disciple group league string -->
+    <string name="league_past_title">已结束</string>
+    <string name="league_current_title">正进行</string>
+    <string name="league_future_title">未进行</string>
+    <string name="league_main_title">实训联赛</string>
+    <string name="league_setting_rule_title">赛制</string>
+    <string name="league_setting_publish_title">对阵</string>
+    <string name="league_setting_award_title">颁奖</string>
+    <string name="league_setting_title">规程</string>
+    <string name="awarding_title">联赛名称</string>
+    <string name="awarding_time">联赛时间</string>
+    <string name="awarding_table">联赛规模</string>
+    <string name="awarding_first">第一名</string>
+    <string name="awarding_second">第二名</string>
+    <string name="awarding_third">第三名</string>
+    <string name="awarding_special">特别奖</string>
+    <string name="awarding">颁证</string>
+    <string name="awarded">已颁</string>
+    <string name="cup">♕</string>
+    <string name="league_equal_title">相同</string>
+    <string name="fight_des_title">确认</string>
+    <string name="league_fight_title">谁赢了?</string>
+    <string name="league_reuslt_title">完成!!!</string>
+    <string name="time_start_title">起始时间</string>
+    <string name="time_end_title">结束时间</string>
+    <string name="time_setting_dialog_title">时间</string>
+    <string name="league_publish_title">警告</string>
+    <string name="league_publish_disable_msg">开展联赛还未到规定人数8人</string>
+    <string name="league_awarding_publish_reason">奖由</string>
+    <string name="league_list_title">联赛名称</string>
+
+    <!-- empty messages -->
+    <string name="empty_disciples">没有徒弟!</string>
+    <string name="empty_fgroup">没有贵人圈</string>
+    <string name="order_plate_group">用户不存在</string>
+    <string name="fgroup_energy_empty">没有群组成员列表</string>
+    <string name="fgroup_est_list_empty">没有评定列表</string>
+    <string name="fgroup_help_lsit_empty">没有求助列表</string>
+    <string name="fgroup_est_disable">你不能判断尚未朋友</string>
+    <string name="fgroup_help_req_empty">告警</string>
+    <string name="fgroup_mem_exit_empty">没有用户退出</string>
+    <string name="league_rounds_empty">没有对阵</string>
+    <string name="league_awarding_empty">没有完成对阵</string>
+    <string name="UPDATE_PROFILE_CERT">谢谢</string>
+
+    <!-- photo view -->
+    <string name="take_photo">拍照</string>
+    <string name="select_photo">从手机相册选择</string>
+
+    <!-- planet settting -->
+    <string name="user_name">名字</string>
+    <string name="user_phone">电话号码</string>
+    <string name="your_phone_is_not_allowed">这是你的电话号码</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- profile setting -->
+    <string name="profile_cover_letter">展示优势或专长、经验、成绩、案例、资源、人脉、潜能、可能成功路径和价值，能为别人带来飞跃进步帮助的可能和诚意</string>
+
+    <!-- qr code -->
+    <string name="qrcode_des">扫一扫上面的二维码图案</string>
+    <string name="qrcode_view_title">我的二维码</string>
+
+    <!-- crash -->
+    <string name="all_gener">全部</string>
+    <string name="area_beside">附近</string>
+    <string name="area_same">同城</string>
+    <string name="all_area">任意</string>
+    <string name="consider_teacher">师父</string>
+    <string name="consider_disciple">徒弟</string>
+    <string name="giveup_title">放弃</string>
+
+    <!--price -->
+    <string name="disciple_price_help">说明</string>
+    <string name="price_status">收费</string>
+    <string name="price_vale">现价</string>
+    <string name="price_chart">走势</string>
+
+    <!-- search -->
+    <string name="searching_now">正在搜索</string>
+
+    <!-- head card -->
+    <string name="card_skill_title">专 长: </string>
+    <string name="card_job_title">职 业: </string>
+    <string name="card_est_title">评 价: </string>
+    <string name="card_rel_title">直 系: </string>
+    <string name="card_status_title">接 单: </string>
+    <string name="card_distance_title">距 离: </string>
+    <string name="card_btn_confirm">关闭</string>
+
+    <!-- coin purchas -->
+    <string name="purchase_title">一个令牌5元人民币</string>
+    <string name="purchase_btn_title">购买</string>
+    <string name="cash_verify_title">验证你的卡</string>
+
+    <!-- account setting -->
+    <string name="purchase_plate_tab">令牌</string>
+    <string name="gift_tab">礼金</string>
+    <string name="exchange_tab">兑换￥</string>
+
+    <!-- friend group titles -->
+    <string name="fgroup_res_first">商会群名称及群号</string>
+    <string name="fgroup_res_second">协会名称及群号</string>
+    <string name="fgroup_res_third">老乡会群名称及群号</string>
+    <string name="fgroup_res_fourth">同学会群名称及群号</string>
+    <string name="fgroup_res_fifth">同事群群名称及群号</string>
+    <string name="fgroup_res_sixth">亲友群群名称及群号</string>
+    <string name="fgroup_res_seventh">兴趣群群名称及群号</string>
+</resources>

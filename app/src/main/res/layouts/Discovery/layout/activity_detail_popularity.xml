@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/list_group_color"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/layout_header" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/normal_section_row"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"/>
+
+            <LinearLayout
+                style="@style/section_style"
+                android:layout_height="@dimen/large_cell_height"
+                android:layout_gravity="center_vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/img_user_photo"
+                    style="@style/img_photo_round"
+                    app:riv_corner_radius="@dimen/normal_radius"
+                    app:riv_oval="false"
+                    android:layout_width="@dimen/normal_imageview_size"
+                    android:layout_height="@dimen/normal_imageview_size"
+                    android:layout_marginLeft="@dimen/cell_padding"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_default"/>
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    style="@style/section_title_style"
+                    android:layout_width="match_parent"/>
+            </LinearLayout>
+
+            <include layout="@layout/layout_border"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+            <TextView
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="@string/popularity_placeholder"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/cell_padding"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="5dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:textCursorDrawable="@drawable/black_cursor"
+                android:textColor="@android:color/black"
+                android:textColorHint="#DDDDDD"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+                <HorizontalScrollView
+                    android:id="@+id/hsv_banner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:overScrollMode="never">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" >
+                        <LinearLayout
+                            android:id="@+id/ll_banner"
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/img_photo"
+                            android:scaleType="centerCrop"
+                            android:layout_width="80.0dip"
+                            android:layout_height="80.0dip"
+                            android:layout_margin="5.0dip"
+                            android:visibility="visible"
+                            android:background="@drawable/round_fill_white_with_border"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <View
+                android:background="@color/list_group_color"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:gravity="center">
+                <TextView
+                    style="@style/TxtTitle"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/setting_item_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/aub"
+                    android:text="@string/sure_man" />
+                <TextView
+                    android:id="@+id/tv_sure_man"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textAlignment="textEnd"
+                    android:textSize="16sp"
+                    android:textColor="@color/light_gray_color"/>
+            </LinearLayout>
+
+            <View
+                android:background="@color/list_border_color"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"
+                android:background="@color/list_group_color"/>
+
+            <Button
+                android:id="@+id/btn_accept_sure"
+                style="@style/section_btn_style"
+                android:background="@drawable/yellow_btn_selection"
+                android:textColor="@color/light_gray_color"
+                android:text="@string/dlg_accept_btn"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_section_height"
+                android:background="@color/list_group_color"/>
+
+            <Button
+                android:id="@+id/btn_decline_sure"
+                style="@style/section_btn_style"
+                android:background="@drawable/round_fill_white_with_border"
+                android:textColor="@color/light_gray_color"
+                android:text="@string/dlg_decline_btn"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

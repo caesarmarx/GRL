@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/firstTitle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:gravity="center_vertical"
+            android:background="@color/list_group_color"
+            android:textSize="@dimen/font17"
+            android:textColor="@color/dark_gray_color"
+            android:text="@string/donate_help_top_title"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/top_recycler_view"
+            android:layout_below="@id/firstTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"/>
+
+        <TextView
+            android:id="@+id/tvTopAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:textSize="@dimen/font15"
+            android:textColor="@color/place_holder_color"
+            android:text="@string/donate_help_top_alert"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/secondTitle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="@dimen/row_view_margin"
+            android:gravity="center_vertical"
+            android:background="@color/list_group_color"
+            android:textSize="@dimen/font17"
+            android:textColor="@color/dark_gray_color"
+            android:text="@string/donate_help_down_title"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/down_recycler_view"
+            android:layout_below="@id/secondTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"/>
+
+        <TextView
+            android:id="@+id/tvDownAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:textSize="@dimen/font15"
+            android:textColor="@color/place_holder_color"
+            android:text="@string/donate_help_down_aler"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/layout_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/small_cell_height"
+        android:background="@android:color/white"
+        android:layoutDirection="rtl"
+        android:layout_gravity="center_vertical">
+        <Button
+            android:id="@+id/btn_search"
+            style="@style/normal_btn_style"
+            android:layout_marginLeft="@dimen/cell_padding"
+            android:layout_marginRight="@dimen/cell_padding"
+            android:layout_width="@dimen/small_btn_width"
+            android:layout_height="@dimen/normal_btn_height"
+            android:gravity="center"
+            android:text="@string/tgroup"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layoutDirection="rtl"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/cell_padding"
+                android:layout_gravity="center"
+                android:text="米"
+                android:textAlignment="center"
+                android:textSize="@dimen/font17"/>
+            <EditText
+                android:id="@+id/et_max_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/cell_padding"
+                android:hint="@string/max_distance"
+                android:background="@drawable/round_fill_white_with_border"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layoutDirection="rtl">
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/cell_padding"
+                android:layout_gravity="center"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="@dimen/font17"/>
+            <EditText
+                android:id="@+id/et_min_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/cell_padding"
+                android:textSize="@dimen/font17"
+                android:hint="@string/min_distance"
+                android:background="@drawable/round_fill_white_with_border"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/user_gps_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
